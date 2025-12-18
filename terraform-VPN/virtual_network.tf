@@ -34,7 +34,7 @@ resource "azurerm_network_interface" "mynic" {
   ip_configuration {
     name = "internal"
     subnet_id = azurerm_subnet.mysubnet.id
-    private_ip_address_allocation = "static"
+    private_ip_address_allocation = "Static"
     public_ip_address_id = azurerm_public_ip.pub-ip.id
   }
 }
