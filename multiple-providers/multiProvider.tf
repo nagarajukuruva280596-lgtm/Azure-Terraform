@@ -44,7 +44,7 @@ resource "azurerm_resource_group" "myrg-2" {
 }
 
 resource "azurerm_storage_account" "storage-acc" {
-  name                     = "mysz${random_string.random_name}"
+  name                     = "mysz${random_string.random_name.id}"
   resource_group_name      = azurerm_resource_group.myrg-1.id
   location                 = azurerm_resource_group.myrg-1.location
   account_tier             = "Standard"
