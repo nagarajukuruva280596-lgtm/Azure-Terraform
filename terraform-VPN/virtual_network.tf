@@ -19,9 +19,10 @@ resource "azurerm_subnet" "mysubnet" {
     address_prefixes = [ "10.0.0.0/24"]
 }
 
-data "azurerm_public_ip" "pub-ip" {
+resource "azurerm_public_ip" "pub-ip" {
     name = "pub-ip"
     resource_group_name = azurerm_resource_group.myrg.name
+    location = azurerm_resource_group.myrg.location
     allocation_method   = "static"
     
 }
