@@ -29,6 +29,6 @@ resource "azurerm_resource_group" "myrg-1" {
 
 resource "azurerm_resource_group" "myrg-2" {
   name = "myrg-2"
-  location = "West US 1"
+  location = "West US"
   provider = azurerm.provider2-westus
 }
