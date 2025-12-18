@@ -39,6 +39,6 @@ resource "azurerm_network_interface" "mynic" {
   }
 }
 
-# output "pubic_ip_add" {
-#   value = data.azurerm_public_ip.pub-ip.ip_add
-# }
+output "pubic_ip_add" {
+  value = data.azurerm_public_ip.pub-ip.ip_address
+}
