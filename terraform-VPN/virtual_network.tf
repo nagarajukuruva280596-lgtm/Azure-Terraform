@@ -23,7 +23,7 @@ resource "azurerm_public_ip" "pub-ip" {
     name = "pub-ip"
     resource_group_name = azurerm_resource_group.myrg.name
     location = azurerm_resource_group.myrg.location
-    allocation_method   = "static"
+    allocation_method   = "Static"
     
 }
 
@@ -35,10 +35,10 @@ resource "azurerm_network_interface" "mynic" {
     name = "internal"
     subnet_id = azurerm_subnet.mysubnet.id
     private_ip_address_allocation = "static"
-    public_ip_address_id = data.azurerm_public_ip.pub-ip.id
+    public_ip_address_id = azurerm_public_ip.pub-ip.id
   }
 }
 
-output "pubic_ip_add" {
-  value = data.azurerm_public_ip.pub-ip.id
-}
+# output "pubic_ip_add" {
+#   value = data.azurerm_public_ip.pub-ip.ip_add
+# }
