@@ -45,7 +45,7 @@ resource "azurerm_resource_group" "myrg-2" {
 
 resource "azurerm_storage_account" "storage-acc" {
   name                     = "mysanaga"
-  resource_group_name      = azurerm_resource_group.myrg-1.id
+  resource_group_name      = azurerm_resource_group.myrg-1.name
   location                 = azurerm_resource_group.myrg-1.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
