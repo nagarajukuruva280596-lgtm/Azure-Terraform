@@ -22,6 +22,7 @@ resource "azurerm_subnet" "mysubnet" {
 data "azurerm_public_ip" "pub-ip" {
     name = "pub-ip"
     resource_group_name = azurerm_resource_group.myrg.name
+    allocation_method   = "static"
     
 }
 
